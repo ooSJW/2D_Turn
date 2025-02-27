@@ -145,8 +145,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sandy
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3334c7d052d444f479d58067c7cdf5e5, type: 2}
-  m_sharedMaterial: {fileID: -2994727152550414058, guid: 3334c7d052d444f479d58067c7cdf5e5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 596d243a8d598114aa3adcad25969b46, type: 2}
+  m_sharedMaterial: {fileID: -5371528170627026488, guid: 596d243a8d598114aa3adcad25969b46, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
