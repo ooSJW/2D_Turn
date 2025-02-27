@@ -1,0 +1,7 @@
+{
+	"array":[
+		{"index":"SteveSkill", "power":0.3, "skill_type":"Attack", "power_growth":0.15, "level":1, "max_level":10, "cool_time":25, "range":5, "skill_icon":"SteveSkillIcon", "skill_effect":"SteveSkillEffect", "skill_sound":"Sfx_SteveSkill", "owner":"Steve"},
+		{"index":"AlexSkill", "power":0.2, "skill_type":"Attack", "power_growth":0.07, "level":1, "max_level":10, "cool_time":15, "range":5, "skill_icon":"AlexSkillIcon", "skill_effect":"AlexSkillEffect", "skill_sound":"Sfx_AlexSkill", "owner":"Alex"},
+		{"index":"SandySkill", "power":1.5, "skill_type":"Heal", "power_growth":0.12, "level":1, "max_level":10, "cool_time":30, "range":50, "skill_icon":"SandySkillIcon", "skill_effect":"SandySkillEffect", "skill_sound":"Sfx_SandySkill", "owner":"Sandy"}
+	]
+}

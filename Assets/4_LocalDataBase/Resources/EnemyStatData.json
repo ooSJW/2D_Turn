@@ -1,0 +1,10 @@
+{
+	"array":[
+		{"index":"11", "name":"Goblin", "max_hp":[50,75,100,125,150,175,200], "attack":[15,20,25,30,35,40,45], "defence":[15,17,19,21,22,24,26], "useable_skill":[], "level":1, "critical_percent":0.3, "critical_increase":0.3, "move_speed":35, "attack_range":5, "max_level":7},
+		{"index":"12", "name":"Ogre", "max_hp":[75,100,125,150,175,200,225], "attack":[25,30,35,40,45,50,55], "defence":[17,19,21,23,25,27,29], "useable_skill":[], "level":1, "critical_percent":0.3, "critical_increase":0.3, "move_speed":35, "attack_range":5, "max_level":7},
+		{"index":"13", "name":"BossOrc", "max_hp":[150,200,225,250,275,300,350], "attack":[35,40,45,50,55,60,65], "defence":[25,27,29,31,34,35,37], "useable_skill":[], "level":1, "critical_percent":0.4, "critical_increase":0.5, "move_speed":35, "attack_range":5, "max_level":7},
+		{"index":"14", "name":"StoneGolem", "max_hp":[100,125,150,175,200,225,250], "attack":[20,25,30,35,40,45,50], "defence":[23,25,27,29,31,33,35], "useable_skill":[], "level":1, "critical_percent":0.3, "critical_increase":0.3, "move_speed":35, "attack_range":5, "max_level":7},
+		{"index":"15", "name":"SandGolem", "max_hp":[125,150,175,200,225,250,275], "attack":[30,35,40,45,50,55,60], "defence":[25,27,29,31,33,35,37], "useable_skill":[], "level":1, "critical_percent":0.3, "critical_increase":0.3, "move_speed":35, "attack_range":5, "max_level":7},
+		{"index":"16", "name":"BossGolem", "max_hp":[200,250,275,300,325,350,400], "attack":[40,45,50,55,60,65,70], "defence":[30,32,34,36,38,40,42], "useable_skill":[], "level":1, "critical_percent":0.5, "critical_increase":0.4, "move_speed":35, "attack_range":5, "max_level":7}
+	]
+}

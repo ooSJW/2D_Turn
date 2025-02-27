@@ -1,0 +1,10 @@
+{
+	"array":[
+		{"index":"1", "item_name":"나무 몽둥이", "power":5, "prefab_name":"WoodenClub", "item_icon":"WoodenClubIcon", "growth_per_strengthen":1, "item_type":"Weapon", "strengthen_level":0, "max_strengthen_level":5, "reinforce_cost":[50,100,150,200,250]},
+		{"index":"2", "item_name":"낡은 철검", "power":10, "prefab_name":"OldIronSword", "item_icon":"OldIronSwordIcon", "growth_per_strengthen":2, "item_type":"Weapon", "strengthen_level":0, "max_strengthen_level":5, "reinforce_cost":[100,150,250,300,350]},
+		{"index":"3", "item_name":"온전한 철검", "power":15, "prefab_name":"FineIronSword", "item_icon":"FineIronSwordIcon", "growth_per_strengthen":3, "item_type":"Weapon", "strengthen_level":0, "max_strengthen_level":5, "reinforce_cost":[200,250,300,350,500]},
+		{"index":"11", "item_name":"나무 갑옷", "power":5, "prefab_name":"WoodenArmor", "item_icon":"WoodenArmorIcon", "growth_per_strengthen":1, "item_type":"Armor", "strengthen_level":0, "max_strengthen_level":5, "reinforce_cost":[50,100,150,200,250]},
+		{"index":"12", "item_name":"낡은 철갑옷", "power":10, "prefab_name":"OldIronArmor", "item_icon":"OldIronArmorIcon", "growth_per_strengthen":2, "item_type":"Armor", "strengthen_level":0, "max_strengthen_level":5, "reinforce_cost":[100,150,250,300,350]},
+		{"index":"13", "item_name":"온전한 철갑옷", "power":15, "prefab_name":"FineIronArmor", "item_icon":"FineIronArmorIcon", "growth_per_strengthen":3, "item_type":"Armor", "strengthen_level":0, "max_strengthen_level":5, "reinforce_cost":[200,250,300,350,500]}
+	]
+}

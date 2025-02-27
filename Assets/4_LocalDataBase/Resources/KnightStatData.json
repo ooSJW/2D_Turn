@@ -1,0 +1,7 @@
+{
+	"array":[
+		{"index":"1", "name":"Alex", "max_hp":[200,225,250,275,300,325,350], "attack":[30,33,36,39,42,45,50], "defence":[30,33,36,39,42,45,50], "level":1, "useable_skill":["AlexSkill"], "critical_percent":0.3, "critical_increase":0.3, "exp":0, "max_exp":[125,200,275,350,425,500,600], "move_speed":35, "attack_range":5, "max_level":7, "knight_icon":"AlexIcon", "weapon":"", "armor":""},
+		{"index":"2", "name":"Steve", "max_hp":[150,175,200,225,250,275,300], "attack":[40,45,50,55,60,65,75], "defence":[24,26,28,30,32,34,36], "level":1, "useable_skill":["SteveSkill"], "critical_percent":0.5, "critical_increase":0.5, "exp":0, "max_exp":[150,250,350,450,550,700,850], "move_speed":35, "attack_range":5, "max_level":7, "knight_icon":"SteveIcon", "weapon":"", "armor":""},
+		{"index":"3", "name":"Sandy", "max_hp":[100,125,150,175,200,225,250], "attack":[20,22,24,26,28,30,35], "defence":[20,21,22,23,24,25,26], "level":1, "useable_skill":["SandySkill"], "critical_percent":0.2, "critical_increase":0.3, "exp":0, "max_exp":[100,160,220,280,340,400,450], "move_speed":35, "attack_range":5, "max_level":7, "knight_icon":"SandyIcon", "weapon":"", "armor":""}
+	]
+}
