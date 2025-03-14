@@ -51,7 +51,8 @@ namespace project02
     {
         private void AddBtnClickEent()
         {
-            Button[] buttons = FindObjectsOfType<Button>();
+            Button[] buttons = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            
             foreach (Button button in buttons)
             {
                 button.onClick.AddListener(() => PlayButtonClickSound());

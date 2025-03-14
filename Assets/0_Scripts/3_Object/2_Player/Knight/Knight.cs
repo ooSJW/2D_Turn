@@ -41,8 +41,8 @@ namespace project02
                 };
                 MaxHp = value.max_hp[CurrentIndex];
                 Hp = value.max_hp[CurrentIndex];
-                CalculateItemDamage();
                 CalculateDamage(this);
+                CalculateItemDamage();
             }
         }
 
@@ -236,8 +236,8 @@ namespace project02
         {
             Hp = knightStatInformation.max_hp[CurrentIndex];
             MaxHp = knightStatInformation.max_hp[CurrentIndex];
-            CalculateItemDamage();
             CalculateDamage(this);
+            CalculateItemDamage();
         }
     }
 
