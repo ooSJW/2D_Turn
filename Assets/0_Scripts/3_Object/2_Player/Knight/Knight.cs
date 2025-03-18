@@ -234,8 +234,8 @@ namespace project02
 
         public void RefreshStat()
         {
-            Hp = knightStatInformation.max_hp[CurrentIndex];
             MaxHp = knightStatInformation.max_hp[CurrentIndex];
+            Hp = knightStatInformation.max_hp[CurrentIndex];
             CalculateDamage(this);
             CalculateItemDamage();
         }
