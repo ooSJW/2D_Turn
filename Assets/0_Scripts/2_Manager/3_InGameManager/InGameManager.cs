@@ -40,11 +40,16 @@ namespace project02
                                 if (knightList[i].KnightState != KnightState.Death)
                                     knightList[i].KnightState = KnightState.Idle;
                             }
-                            StartCoroutine(PlayerTurn());
+                            playerTurn = PlayerTurn();
+                            StartCoroutine(playerTurn);
                             break;
 
                         case CombatState.PlayerTurn:
-                            //knightList.Cast<CombatObjectBase>().ToList();
+                            /* InGameManger의 일부분 */
+
+                            // 현재 프로젝트의 규모에서는 미약하지만 GC의 호출을 줄여 성능 저하를 방지하기 위해 프로퍼티와 코루틴을 병합하여 사용하며
+                            // 실행되는 코루틴의 수를 줄여서 구현.
+
                             turnObject.Clear();
                             for (int i = 0; i < knightList.Count; i++)
                             {
@@ -92,7 +97,8 @@ namespace project02
                             break;
 
                         case CombatState.PlayerLose:
-                            StartCoroutine(PlayerLose());
+                            playerLose = PlayerLose();
+                            StartCoroutine(playerLose);
                             break;
                     }
                 }
@@ -107,8 +113,10 @@ namespace project02
         private List<Knight> knightList;
         private List<Enemy> enemyList;
 
+        private IEnumerator playerLose;
+        private IEnumerator playerTurn;
+        private IEnumerator activateMentuUI;
         public int ClearStageCount { get; set; }
-
         private float delayTime = 1.5f;
     }
 
@@ -157,7 +165,8 @@ namespace project02
     {
         private void StageClear()
         {
-            StartCoroutine(ActivateMenuUI());
+            activateMentuUI = ActivateMenuUI();
+            StartCoroutine(activateMentuUI);
             if (!MainSystem.Instance.StageManager.IsCleared())
                 MainSystem.Instance.StageManager.SetIsClear(true);
         }

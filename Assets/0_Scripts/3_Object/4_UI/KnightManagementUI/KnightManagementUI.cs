@@ -5,6 +5,7 @@
 */
 namespace project02
 {
+    using DG.Tweening;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
     using System;
@@ -473,6 +474,8 @@ namespace project02
                     SelectedItem.StrengthenLevel++;
                     MainSystem.Instance.DataManager.EquipItem(SelectedKnightIcon.Knight.name, SelectedItem);
                     RefreshReinforceUI();
+                    SelectedKnightIcon.Knight.RefreshStat();
+                    SetInfoText(SelectedKnightIcon.Knight);
                     MainSystem.Instance.SoundManager.SoundController.Sfx.PlayReinforceSound();
                 }
                 else
