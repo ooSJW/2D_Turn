@@ -97,7 +97,7 @@ namespace project02
             totalDamage = combatObjectBase.Attack;
         }
 
-        public void Active(Transform targetValue)
+        public virtual void Active(Transform targetValue)
         {
             IsMyTurn = true;
             target = targetValue;

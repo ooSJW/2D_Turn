@@ -189,7 +189,7 @@ namespace project02
             BackGroundList.Add(backGroundValue);
             BackGroundList.Last().Initialize();
         }
-        public void SignDownBackGround(BackGround backGroundValue)
+        public void SignOutBackGround(BackGround backGroundValue)
         {
             BackGroundList.Remove(backGroundValue);
         }

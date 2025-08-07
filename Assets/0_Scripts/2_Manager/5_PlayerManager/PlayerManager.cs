@@ -37,7 +37,7 @@ namespace project02
             Player = playerValue;
             Player.Initialize();
         }
-        public void SignDownPlayer()
+        public void SignOutPlayer()
         {
             Player = null;
         }

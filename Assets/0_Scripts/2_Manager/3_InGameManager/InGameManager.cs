@@ -9,10 +9,7 @@ namespace project02
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
-    using TMPro;
-    using Unity.VisualScripting;
     using UnityEngine;
-    using static project02.ItemData;
     using static project02.StageData;
 
     public partial class InGameManager : MonoBehaviour // Data Property
@@ -33,6 +30,8 @@ namespace project02
                             turnObject.Clear();
                             break;
                         case CombatState.Start:
+                            // 프로퍼티를 사용해 현재 씬(스테이지)의 상태에 따른 진행을 나누고
+                            // 현재 알마은 객체에게 메시지를 보내는 방식으로 구현.
                             MainSystem.Instance.StageManager.MoveStage = false;
                             MainSystem.Instance.StageManager.Score = 0;
                             for (int i = 0; i < knightList.Count; i++)
@@ -45,11 +44,6 @@ namespace project02
                             break;
 
                         case CombatState.PlayerTurn:
-                            /* InGameManger의 일부분 */
-
-                            // 현재 프로젝트의 규모에서는 미약하지만 GC의 호출을 줄여 성능 저하를 방지하기 위해 프로퍼티와 코루틴을 병합하여 사용하며
-                            // 실행되는 코루틴의 수를 줄여서 구현.
-
                             turnObject.Clear();
                             for (int i = 0; i < knightList.Count; i++)
                             {
@@ -62,7 +56,6 @@ namespace project02
                                 if (MainSystem.Instance.SceneManager.ActiveScene.name == SceneName.CombatScene.ToString())
                                     turnObject[0].Active(enemyList[UnityEngine.Random.Range(0, enemyList.Count)].transform);
                             }
-
                             break;
 
                         case CombatState.EnemyTurn:
@@ -217,7 +210,6 @@ namespace project02
                         break;
 
                     case RewardType.Item:
-
                         Item item = MainSystem.Instance.ItemManager.ItemController.SpawnRandomItem(itemParent);
                         MainSystem.Instance.PlayerManager.Player.itemList.Add(item);
                         break;

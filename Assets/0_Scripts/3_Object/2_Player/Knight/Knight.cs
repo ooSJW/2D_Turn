@@ -55,6 +55,7 @@ namespace project02
                 if (level < knightStatInformation.max_level)
                 {
                     exp = value;
+                    // 한 번에 2레벨 이상 올랐을 때를 대비해 while사용
                     while (exp >= knightStatInformation.max_exp[CurrentIndex])
                     {
                         exp -= knightStatInformation.max_exp[CurrentIndex];
@@ -234,6 +235,8 @@ namespace project02
 
         public void RefreshStat()
         {
+            // 캐릭터 레벨이 오르거나, 아이템을 장착, 해제, 장착된 아이템 강화 시 호출되며
+            // 업데이트된 능력치를 객체에 적용시키는 기능
             MaxHp = knightStatInformation.max_hp[CurrentIndex];
             Hp = knightStatInformation.max_hp[CurrentIndex];
             CalculateDamage(this);

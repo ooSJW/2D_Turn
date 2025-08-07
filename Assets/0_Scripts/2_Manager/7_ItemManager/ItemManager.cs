@@ -37,7 +37,7 @@ namespace project02
             ItemController=itemControllerValue;
             ItemController.Initialize();
         }
-        public void SignDownItemController()
+        public void SignOutItemController()
         {
             ItemController=null;
         }

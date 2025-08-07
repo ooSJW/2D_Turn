@@ -469,12 +469,12 @@ namespace project02
             if (SelectedItem.StrengthenLevel < itemInfo.max_strengthen_level)
             {
                 if (coin >= reinforceCost)
-                {
+                {   // 아이템을 강화했을 때
                     MainSystem.Instance.PlayerManager.Player.UseCoin(reinforceCost);
-                    SelectedItem.StrengthenLevel++;
+                    SelectedItem.StrengthenLevel++; // 아이템 객체 능력치 업데이트
+                    SelectedKnightIcon.Knight?.RefreshStat(); // Item객체의 Owner이 있을 때 Owner객체의 능력치 업데이트
                     MainSystem.Instance.DataManager.EquipItem(SelectedKnightIcon.Knight.name, SelectedItem);
                     RefreshReinforceUI();
-                    SelectedKnightIcon.Knight.RefreshStat();
                     SetInfoText(SelectedKnightIcon.Knight);
                     MainSystem.Instance.SoundManager.SoundController.Sfx.PlayReinforceSound();
                 }

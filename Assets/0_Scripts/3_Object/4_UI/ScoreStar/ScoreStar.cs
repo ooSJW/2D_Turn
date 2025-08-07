@@ -39,7 +39,7 @@ namespace project02
     public partial class ScoreStar : MonoBehaviour // Property
     {
         public void ActiveStar(int scoreValue)
-        {
+        {   // 스테이지 클리어 시 점수에 따라 별 획득 효과 구현
             foreach (var item in starImage)
             {
                 item.gameObject.SetActive(false);
@@ -55,8 +55,11 @@ namespace project02
                 .SetDelay(i * 0.5f)
                 .OnStart(() => starRectTransform.gameObject.SetActive(true));
 
-                starRectTransform.DORotate(new Vector3(0, 0, 360), 0.5f, RotateMode.FastBeyond360)
-                    .SetEase(Ease.Linear).SetDelay(i * 0.5f).OnComplete(() => MainSystem.Instance.SoundManager.SoundController.Sfx.PlaySfx(AudioClipName.Sfx_Star));
+                starRectTransform.DORotate(new Vector3(0, 0, 360),
+                    0.5f,
+                    RotateMode.FastBeyond360)
+                    .SetEase(Ease.Linear).SetDelay(i * 0.5f).OnComplete
+                    (() => MainSystem.Instance.SoundManager.SoundController.Sfx.PlaySfx(AudioClipName.Sfx_Star));
             }
         }
     }

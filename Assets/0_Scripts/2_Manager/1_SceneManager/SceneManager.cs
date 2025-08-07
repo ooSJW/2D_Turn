@@ -39,7 +39,7 @@ namespace project02
             ActiveScene = activeSceneValue;
             ActiveScene.Initialize();
         }
-        public void SignDownActiveScene()
+        public void SignOutActiveScene()
         {
             ActiveScene = null;
         }

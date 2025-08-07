@@ -149,7 +149,7 @@ namespace project02
     {
         public void Death()
         {
-            MainSystem.Instance.EnemyManager.SignDownEnemy(this);
+            MainSystem.Instance.EnemyManager.SignOutEnemy(this);
         }
         public void Despawn()
         {

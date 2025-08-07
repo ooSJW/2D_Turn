@@ -37,7 +37,7 @@ namespace project02
             enemyList.Add(enemyValue);
             enemyValue.Initialize();
         }
-        public void SignDownEnemy(Enemy enemyValue)
+        public void SignOutEnemy(Enemy enemyValue)
         {
             enemyList.Remove(enemyValue);
         }

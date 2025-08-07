@@ -41,7 +41,7 @@ namespace project02
 
         private int strengthenlevel;
         public int StrengthenLevel
-        {
+        {   // 해당 프로퍼티의 값 변경 시 아이템 능력치 향상 및 UI초기화
             get => strengthenlevel;
             set
             {

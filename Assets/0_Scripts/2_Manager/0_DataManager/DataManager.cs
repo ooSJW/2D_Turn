@@ -8,6 +8,7 @@ namespace project02
     using JetBrains.Annotations;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
+    using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
@@ -358,26 +359,33 @@ namespace project02
         {
             JObject json = new JObject();
             string jsonString = PlayerPrefs.GetString(item.Owner + "Json");
-            string itemType;
+            string itemType = string.Empty;
 
-            if (item.ItemInformation.item_type == ItemType.Weapon.ToString())
-                itemType = "Weapon";
-            else
-                itemType = "Armor";
+            ItemType currentItemType = GetItemType(item.ItemInformation.item_type);
+            if (currentItemType != ItemType.None)
+                itemType = currentItemType.ToString();
 
-            if (!string.IsNullOrEmpty(jsonString))
+            if (!string.IsNullOrEmpty(jsonString) && !string.IsNullOrEmpty(itemType))
             {
                 json = JsonConvert.DeserializeObject<JObject>(jsonString);
                 if (json.ContainsKey(itemType))
                     json.Remove(itemType);
             }
-
             PlayerPrefs.SetString(item.Owner + "Json", json.ToString());
         }
 
+        public ItemType GetItemType(string type) => type switch
+        {
+            "Weapon" => ItemType.Weapon,
+            "Armor" => ItemType.Armor,
+            _ => ItemType.None,
+        };
 
         public void SaveItemData()
         {
+            // 아이템 착용, 해제, 획득 시 Playerfrebs로 아이템 저장
+            // playerPrefs => 기본적으로 원시 타입만 가능, 외부에서 읽기, 수정 불가능
+            // 다른 프로젝트에서는 Json/csv방식 사용
             List<Item> itemList = MainSystem.Instance.PlayerManager.Player.itemList;
             JArray jsonArray = new JArray();
             foreach (Item item in itemList)
@@ -403,9 +411,11 @@ namespace project02
                 jsonArray = JsonConvert.DeserializeObject<JArray>(jsonString);
                 foreach (JToken itemData in jsonArray)
                 {
+                    // 세이브 로드 시 데이터와 값을 string 형식으로 변환하고, 변수 이름을 상수 또는 enum으로 설정하는 것 또한 불편함.
                     string itemName = itemData["item_name"].ToString();
                     Item item = MainSystem.Instance.ItemManager.ItemController.SpawnItem(itemName);
                     item.Initialize();
+                    
                     item.StrengthenLevel = (int)itemData["strengthen_level"];
 
                     string owner = itemData["owner"].ToString();
